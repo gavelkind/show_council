@@ -1,0 +1,16 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+
+# Targeted decisions
+show_council_decision;Show council;;;;;;;;;x
+show_council_decision_named;Show the council of [Root.GetTitledFirstName].;;;;;;;;;;;;;x
+show_council_decision_desc;Show the council of [Root.GetTitledFirstName].;;;;;;;;;;;;;x
+
+# Events
+ShowCouncil.1.desc;The council of [From.GetTitledName] is shown below.;;;;;;;;;x
+ShowCouncil.1.council;Councillors;;;;;;;;;x
+ShowCouncil.1.key_honorary_titles;Key honorary titles;;;;;;;;;x
+ShowCouncil.1.key_honorary_titles.tooltip;The following honorary titles have important effects:\n\n* Designated regent\n* Designated heir (patrician)\n* Despot\n* Chief Qadi\n* Court Guru\n;;;;;;;;;x
+ShowCouncil.1.commanders;Commanders;;;;;;;;;x
+ShowCouncil.1.heirs;Heirs;;;;;;;;;x
+#ShowCouncil.1.heirs.tooltip;A character might have multiple heirs due to:\n\n* Dynasty losing election (feudal or patrician)\n*Kingdom or higher titles with different succession laws\n* Gavelkind\n* Viceroyalty reverting to liege\n;;;;;;;;;x
+ShowCouncil.1.patricians;Patricians;;;;;;;;;x

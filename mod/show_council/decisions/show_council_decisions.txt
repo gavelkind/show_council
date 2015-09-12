@@ -1,0 +1,33 @@
+targetted_decisions = {
+
+    show_council_decision = {
+        ai_target_filter = court
+
+        from_potential = {
+            ai = no
+        }
+        potential = {
+            OR = {
+                is_patrician = yes
+                higher_tier_than = baron
+            }
+        }
+        allow = {
+            always = yes
+        }
+        effect = {
+            hidden_tooltip = {
+                FROM = {
+                    character_event = { id = ShowCouncil.1 }
+                }
+            }
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+
+}
