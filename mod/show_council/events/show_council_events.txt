@@ -20,6 +20,17 @@ character_event = {
             job_treasurer = { break = yes }
             job_spymaster = { break = yes }
             job_spiritual = { break = yes }
+
+            # Advisor slots (Conclave)
+            any_vassal = {
+                limit = {
+                    OR = {
+                        has_minor_title = title_councilmember_king
+                        has_minor_title = title_councilmember_emperor
+                    }
+                }
+                break = yes
+            }
         }
     }
 
@@ -90,6 +101,65 @@ character_event = {
             any_vassal = {
                 limit = {
                     is_patrician = yes
+                }
+                break = yes
+            }
+        }
+    }
+
+#    option = {
+#        name = "ShowCouncil.1.cardinals"
+#        trigger = { FROM = { controls_religion = catholic }  has_dlc = "Sons of Abraham" }
+#    }
+
+#    option = {
+#        name = "ShowCouncil.1.cardinals"
+#        trigger = { FROM = { controls_religion = fraticelli }  has_dlc = "Sons of Abraham" }
+#    }
+
+
+    option = {
+        name = "ShowCouncil.1.most_popular_vassal"
+        custom_tooltip = { text = "ShowCouncil.1.most_popular_vassal.tooltip" }
+
+        # faction: faction_powerful_vassal_takeover
+        # cb: powerful_vassal_takeover_war
+        # ultimatum: EVTDESC8220
+
+        trigger = {
+            has_dlc = "Zeus"
+            FROM = {
+                is_feudal = yes
+                higher_tier_than = DUKE
+                NOT = {
+                    any_demesne_title = {
+                        temporary = yes
+                    }
+                }
+            }
+        }
+
+        FROM = {
+            most_popular_vassal = {
+                # Copied verbatim from powerful_vassal_takeover_war
+                limit = {
+                    higher_tier_than = BARON
+                    is_feudal = yes
+                    prisoner = no
+                    NOR = {
+                        trait = in_hiding
+                        trait = incapable
+                        trait = eunuch
+                    }
+                    age = 16
+                    #can_hold_title = PREVPREV
+                    OR = {
+                        is_female = no
+                        AND = {
+                            is_female = yes
+                            ROOT = { has_law = true_cognatic_succession }
+                        }
+                    }
                 }
                 break = yes
             }

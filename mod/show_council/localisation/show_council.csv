@@ -11,6 +11,13 @@ ShowCouncil.1.council;Councillors;;;;;;;;;x
 ShowCouncil.1.key_honorary_titles;Key honorary titles;;;;;;;;;x
 ShowCouncil.1.key_honorary_titles.tooltip;The following honorary titles have important effects:\n\n* Designated regent\n* Designated heir (patrician)\n* Despot\n* Chief Qadi\n* Court Guru\n;;;;;;;;;x
 ShowCouncil.1.commanders;Commanders;;;;;;;;;x
-ShowCouncil.1.heirs;Heirs;;;;;;;;;x
-#ShowCouncil.1.heirs.tooltip;A character might have multiple heirs due to:\n\n* Dynasty losing election (feudal or patrician)\n*Kingdom or higher titles with different succession laws\n* Gavelkind\n* Viceroyalty reverting to liege\n;;;;;;;;;x
 ShowCouncil.1.patricians;Patricians;;;;;;;;;x
+ShowCouncil.1.most_popular_vassal;Most popular vassal;;;;;;;;;x
+ShowCouncil.1.most_popular_vassal.tooltip;A faction to overthrow [From.GetTitledFirstName] would:\n\n* Install the most popular vassal as the new ruler.\n* Change succession to Feudal Elective.\n* Implement Full Council Authority, a law that prevents the ruler from firing council members (if they are powerful vassals) and locks succession to Feudal Elective.;;;;;;;;;x
+
+#Unused
+#ShowCouncil.1.heirs;Heirs;;;;;;;;;x
+#ShowCouncil.1.heirs.tooltip;A character might have multiple heirs due to:\n\n* Dynasty losing election (feudal or patrician)\n*Kingdom or higher titles with different succession laws\n* Gavelkind\n* Viceroyalty reverting to liege\n;;;;;;;;;x
+#ShowCouncil.1.powerful_vassals;Powerful vassals;;;;;;;;;x
+#ShowCouncil.1.cardinals;Cardinals;;;;;;;;;x
+#ShowCouncil.1.clans;Clans;;;;;;;;;x
