@@ -1,0 +1,34 @@
+showcouncil_councilor_tt = {
+    custom_tooltip = {
+        text = ShowCouncil.IsCouncilor.tooltip
+    }
+}
+
+showcouncil_advisor_tt = {
+    custom_tooltip = {
+        text = ShowCouncil.IsAdvisor.tooltip
+    }
+}
+
+showcouncil_commander_tt = {
+    # Note: 2.8 will allow 'else if' to easily split out "in seclusion", etc
+
+    if = {
+        limit = {
+            in_command = yes
+        }
+        custom_tooltip = {
+            text = ShowCouncil.CommanderInCommand.tooltip
+        }
+    }
+    if = {
+        limit = {
+            NOT = {
+                in_command = yes
+            }
+        }
+        custom_tooltip = {
+            text = ShowCouncil.CommanderNotInCommand.tooltip
+        }
+    }
+}

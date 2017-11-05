@@ -15,11 +15,11 @@ character_event = {
         # Sure would be nice if the order were preserved...
 
         FROM = {
-            job_chancellor = { break = yes }
-            job_marshal = { break = yes }
-            job_treasurer = { break = yes }
-            job_spymaster = { break = yes }
-            job_spiritual = { break = yes }
+            job_chancellor = { showcouncil_councilor_tt = yes }
+            job_marshal = { showcouncil_councilor_tt = yes }
+            job_treasurer = { showcouncil_councilor_tt = yes }
+            job_spymaster = { showcouncil_councilor_tt = yes }
+            job_spiritual = { showcouncil_councilor_tt = yes }
 
             # Advisor slots (Conclave)
             any_vassal = {
@@ -29,7 +29,7 @@ character_event = {
                         has_minor_title = title_councilmember_emperor
                     }
                 }
-                break = yes
+                showcouncil_advisor_tt = yes
             }
         }
     }
@@ -39,11 +39,7 @@ character_event = {
         custom_tooltip = { text = "ShowCouncil.1.key_honorary_titles.tooltip" }
 
         FROM = {
-            # The standard thing to do here is to duplicate code under both "any_courtier"
-            # and "any_vassal". But I don't like duplicating and I really don't like how
-            # "any_courtier" works.
-            # So instead, I use "any_realm_character".
-            # It would be nice if Paradox were to add "any_direct_subject" to fix this.
+            # Code duplication is to work around https://forum.paradoxplaza.com/forum/index.php?threads/2-7-2-seek-treatment-for-illness-fails-with-certain-vassals-as-court-physician.1041205/
 
             any_vassal = {
                 limit = {
@@ -53,6 +49,7 @@ character_event = {
                         has_minor_title = title_patrician_heir
                         has_minor_title = title_chief_qadi
                         has_minor_title = title_guru
+                        has_minor_title = title_court_physician
                     }
                 }
                 break = yes
@@ -66,6 +63,7 @@ character_event = {
                         has_minor_title = title_patrician_heir
                         has_minor_title = title_chief_qadi
                         has_minor_title = title_guru
+                        has_minor_title = title_court_physician
                     }
                 }
                 break = yes
@@ -76,18 +74,20 @@ character_event = {
     option = {
         name = "ShowCouncil.1.commanders"
 
+        # Also: The ruler, the ruler's marshal, marshals of vassals who don't have any counties (e.g. Ecumenical Patriarch)
+
         FROM = {
             any_vassal = {
                 limit = {
                     has_minor_title = title_commander
                 }
-                break = yes
+                showcouncil_commander_tt = yes
             }
             any_courtier = {
                 limit = {
                     has_minor_title = title_commander
                 }
-                break = yes
+                showcouncil_commander_tt = yes
             }
         }
     }
@@ -102,6 +102,7 @@ character_event = {
                 limit = {
                     is_patrician = yes
                 }
+                # Todo: respect (prestige + age^2, without campaign funds)
                 break = yes
             }
         }

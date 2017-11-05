@@ -9,11 +9,20 @@ show_council_decision_desc;Show the council of [Root.GetTitledFirstName].;;;;;;;
 ShowCouncil.1.desc;The council of [From.GetTitledName] is shown below.;;;;;;;;;x
 ShowCouncil.1.council;Councillors;;;;;;;;;x
 ShowCouncil.1.key_honorary_titles;Key honorary titles;;;;;;;;;x
-ShowCouncil.1.key_honorary_titles.tooltip;The following honorary titles have important effects:\n\n* Designated regent\n* Designated heir (patrician)\n* Despot\n* Chief Qadi\n* Court Guru\n;;;;;;;;;x
+ShowCouncil.1.key_honorary_titles.tooltip;The following honorary titles have important effects:\n\n* Designated regent\n* Designated heir (patrician)\n* Despot\n* Chief Qadi\n* Court Guru\n* Court Physician\n;;;;;;;;;x
 ShowCouncil.1.commanders;Commanders;;;;;;;;;x
 ShowCouncil.1.patricians;Patricians;;;;;;;;;x
 ShowCouncil.1.most_popular_vassal;Most popular vassal;;;;;;;;;x
 ShowCouncil.1.most_popular_vassal.tooltip;A faction to overthrow [From.GetTitledFirstName] would:\n\n* Install the most popular vassal as the new ruler.\n* Change succession to Feudal Elective.\n* Implement Full Council Authority, a law that prevents the ruler from firing council members (if they are powerful vassals) and locks succession to Feudal Elective.;;;;;;;;;x
+
+# Effects
+# Note: Automatically prefixed with GetTitledFirstName by the scope change (a feature of the tooltip builder system)
+# Note: I'm not listing job actions because it's not easily available in this localization system. (The other system has $ACTION$ and is used in  CHAR_STATUS_JOBACTION.)
+ShowCouncil.IsCouncilor.tooltip;[This.GetJobTitle]\n;;;;;;;;;x
+ShowCouncil.IsAdvisor.tooltip;Advsior\n;;;;;;;;;x
+
+ShowCouncil.CommanderInCommand.tooltip;Leading troops in §Y[This.Location.GetName]§!\n;;;;;;;;;x
+ShowCouncil.CommanderNotInCommand.tooltip;-\n;;;;;;;;;x
 
 #Unused
 #ShowCouncil.1.heirs;Heirs;;;;;;;;;x
